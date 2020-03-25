@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 #Autor: Luis Carreto
 #Descripcion: Envia una peticion TCP a los 65535 puertos, si el puerto se encuentra cerrado retorna un error, si no llegase a retornar el error se imprime en pantalla que el puerto se encuentra abierto
+#Escrito para el OSCP
 
 if [ "$1" == "" ]; then
           echo "Usage: bash `basename $0` <ip> " && echo ""
