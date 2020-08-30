@@ -10,6 +10,7 @@ if [ "$1" == "" ]; then
 fi
 
 echo "[+]Starting scan ports " 
+echo "[+]Scan in $1" && echo "[+]Scan in $1" > scan_ports
 for port in $(seq 1 65535); do
         timeout 1 bash -c "echo > /dev/tcp/$1/$port" 2>/dev/null && echo "PORT $port OPEN " && echo "PORT $port OPEN " >> scan_ports &
 done; wait
